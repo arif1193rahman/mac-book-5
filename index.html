@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body>
+    <main>
+        <div class="row">
+            <div class='col-5'>
+                <div class="image-style">
+                    <img class="img-fluid" src="images/mac.png" alt="">
+                </div>
+            </div>
+            <div class='col-7'>
+                <div>
+                    <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis, eaque.</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A enim optio quod, deserunt dolores
+                        mollitia neque odio nesciunt voluptas, officiis illum vitae recusandae nemo fuga velit suscipit
+                        reiciendis alias consequatur!</p>
+                </div>
+                <div>
+                    <h5>MEMORY</h5>
+                    <button id="small-memory">8GB unified memory</button>
+                    <button id="big-memory">16GB unified memory</button>
+                </div>
+                <div>
+                    <h5>Storage</h5>
+                    <button id="small-storage">256GB SSd storage</button>
+                    <button id="big-storage">512GB SSD storage</button>
+                    <button id="bigger-storage">1TB SSD storage</button>
+                </div>
+                <div>
+                    <h5>Chose your delivery option</h5>
+                    <button>Free delivery</button>
+                    <button>delivery charge $20</button>
+                </div>
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td>Best Price</td>
+                                <td>$ <span id="total-price">1299</span> </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Extra memory</td>
+                                <td>$<span id="memory-price">0</span></td>
+                            </tr>
+                            <tr>
+                                <td>Extra SSD</td>
+                                <td>$<span id="ssd-price">0</span> </td>
+                            </tr>
+                            <tr>
+                                <td>Delivary charge</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">Total Price</th>
+                                <th scope="col">$ <span id="total">1299</span> </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+    <script src="js/apps.js"></script>
+</body>
+
+</html>
