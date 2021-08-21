@@ -13,24 +13,21 @@ const total = document.getElementById('total');
 
 smallMemory.addEventListener('click', function () {
     memoryPrice.innerText = '5';
-    // console.log(memoryPrice);
     return updatePrice();
 });
 bigMemory.addEventListener('click', function () {
-    memoryPrice.innerText = '100';
-    // console.log(memoryPrice);
+    memoryPrice.innerText = '180';
     return updatePrice();
 });
 
 // update memory price
-function updatePrice() {
-    const smallExtraMemory = parseInt(memoryPrice.innerText);
-    const productPrice = parseInt(totalPrice.innerText);
-    // console.log(smallExtraMemory.innerText, bigExtraMemory.innerText);
-    const grandTotal = smallExtraMemory + productPrice;
-    total.innerText = grandTotal;
-    updateSsd();
-};
+// function updatePrice() {
+//     // const smallExtraMemory = parseInt(memoryPrice.innerText);
+//     const productPrice = parseInt(totalPrice.innerText);
+//     const grandTotal = smallExtraMemory + productPrice;
+//     total.innerText = grandTotal;
+
+// };
 
 // get SSD storage part
 const smallStorage = document.getElementById('small-storage');
@@ -44,28 +41,44 @@ const ssdPrice = document.getElementById('ssd-price');
 
 // get SSD storage part listner
 smallStorage.addEventListener('click', function () {
-    ssdPrice.innerText = '10';
-    return updateSsd();
+    ssdPrice.innerText = '0';
+    return updatePrice();
 });
 bigStorage.addEventListener('click', function () {
-    ssdPrice.innerText = '50';
-    return updateSsd();
+    ssdPrice.innerText = '100';
+    return updatePrice();
 });
 biggerStorage.addEventListener('click', function () {
-    ssdPrice.innerText = '80';
-    return updateSsd();
+    ssdPrice.innerText = '180';
+    return updatePrice();
 });
 
+// get delivery Id
+const freeDelivery = document.getElementById('free-delivery');
+const paidDelivery = document.getElementById('paid-delivery');
+
+const deliveryCost = document.getElementById('delivery-cost');
+
+// get delivery event part
+freeDelivery.addEventListener('click', function () {
+    deliveryCost.innerText = '5';
+    return updatePrice();
+});
+paidDelivery.addEventListener('click', function () {
+    deliveryCost.innerText = '20';
+    return updatePrice();
+});
 
 
 
 // update SSD price
-function updateSsd() {
+function updatePrice() {
     const extraSsd = parseInt(ssdPrice.innerText);
-    const extraSsdPrice = parseInt(totalPrice.innerText);
-    const ssdGrandTotal = extraSsd + extraSsdPrice;
-    total.innerText = ssdGrandTotal;
-
+    const smallExtraMemory = parseInt(memoryPrice.innerText);
+    const deliveryAmount = parseInt(deliveryCost.innerText);
+    const productPrice = parseInt(totalPrice.innerText);
+    const grandTotal = extraSsd + productPrice + smallExtraMemory + deliveryAmount;
+    total.innerText = grandTotal;
 };
-updatePrice();
+
 
