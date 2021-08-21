@@ -8,7 +8,6 @@ const totalPrice = document.getElementById('total-price');
 // total
 const total = document.getElementById('total');
 
-
 // get result from product
 smallMemory.addEventListener('click', function () {
     memoryPrice.innerText = '0';
@@ -29,7 +28,6 @@ function updatePrice() {
     discountPrice.innerText = total.innerText;
 };
 
-
 // get SSD storage part
 const smallStorage = document.getElementById('small-storage');
 const bigStorage = document.getElementById('big-storage');
@@ -37,7 +35,7 @@ const biggerStorage = document.getElementById('bigger-storage');
 
 const ssdPrice = document.getElementById('ssd-price');
 
-// get SSD storage part listner
+// get SSD storage part listener
 smallStorage.addEventListener('click', function () {
     ssdPrice.innerText = '0';
     return updatePrice();
@@ -51,7 +49,6 @@ biggerStorage.addEventListener('click', function () {
     return updatePrice();
 });
 
-
 // get delivery Id
 const freeDelivery = document.getElementById('free-delivery');
 const paidDelivery = document.getElementById('paid-delivery');
@@ -60,7 +57,7 @@ const deliveryCost = document.getElementById('delivery-cost');
 
 // get delivery event part
 freeDelivery.addEventListener('click', function () {
-    deliveryCost.innerText = '5';
+    deliveryCost.innerText = '0';
     return updatePrice();
 });
 paidDelivery.addEventListener('click', function () {
@@ -74,24 +71,22 @@ const promoButton = document.getElementById('promo-btn');
 // discount price
 const discountPrice = document.getElementById('discount-price');
 
-
 // function for promo
 function calculatePromo() {
     const promo = promoInputCode.value;
     if (promo == 'stevekaku') {
         const promoTotalPrice = total.innerText;
-        const tax = parseInt(promoTotalPrice) / 100 * 20;
-        discountPrice.innerText = promoTotalPrice - tax;
+        const promotionDiscount = parseInt(promoTotalPrice) / 100 * 20;
+        discountPrice.innerText = promoTotalPrice - promotionDiscount;
     }
     else {
         alert('Please enter valid promo');
     }
     promoInputCode.value = '';
 }
-
 promoButton.addEventListener('click', function () {
     calculatePromo();
-})
+});
 
 
 
