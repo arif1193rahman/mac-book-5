@@ -5,3 +5,7 @@ body {
 .image-style {
     margin-left: 5%;
 }
+
+button:hover {
+    background-color: rgba(236, 196, 143, 0.719);
+}
