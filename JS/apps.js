@@ -12,7 +12,7 @@ const total = document.getElementById('total');
 
 
 smallMemory.addEventListener('click', function () {
-    memoryPrice.innerText = '5';
+    memoryPrice.innerText = '0';
     return updatePrice();
 });
 bigMemory.addEventListener('click', function () {
@@ -91,8 +91,9 @@ function calculatePromo() {
         discountPrice.innerText = promoTotalPrice - tax;
     }
     else {
-        alert('Please enter valid promo')
+        alert('Please enter valid promo');
     }
+    promoInputCode.value = '';
 }
 
 promoButton.addEventListener('click', function () {

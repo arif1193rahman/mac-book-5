@@ -1,5 +1,7 @@
+body {
+    padding-top: 20px;
+}
+
 .image-style {
-    border: 2px solid green;
-    max-width: 80%;
-    margin-left: 50px;
+    margin-left: 5%;
 }
