@@ -69,6 +69,35 @@ paidDelivery.addEventListener('click', function () {
     return updatePrice();
 });
 
+// Promo code Id
+const promoInputCode = document.getElementById('promo-code');
+
+// Promo Button 
+const promoButton = document.getElementById('promo-btn');
+// discount price
+const discountPrice = document.getElementById('discount-price');
+
+// function for promotion
+function addPromoCode() {
+
+}
+
+
+function calculatePromo() {
+    const promo = promoInputCode.value;
+    if (promo == 'stevekaku') {
+        const promoTotalPrice = total.innerText;
+        const tax = parseInt(promoTotalPrice) / 100 * 20;
+        discountPrice.innerText = promoTotalPrice - tax;
+    }
+    else {
+        alert('Please enter valid promo')
+    }
+}
+
+promoButton.addEventListener('click', function () {
+    calculatePromo();
+})
 
 
 // update SSD price
@@ -79,6 +108,7 @@ function updatePrice() {
     const productPrice = parseInt(totalPrice.innerText);
     const grandTotal = extraSsd + productPrice + smallExtraMemory + deliveryAmount;
     total.innerText = grandTotal;
+    discountPrice.innerText = total.innerText;
 };
 
 
